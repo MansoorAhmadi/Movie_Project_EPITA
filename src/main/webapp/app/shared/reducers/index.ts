@@ -12,6 +12,30 @@ import password, { PasswordState } from 'app/modules/account/password/password.r
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
 import sessions, { SessionsState } from 'app/modules/account/sessions/sessions.reducer';
+// prettier-ignore
+import movie, {
+  MovieState
+} from 'app/entities/movie/movie.reducer';
+// prettier-ignore
+import seenMovie, {
+  SeenMovieState
+} from 'app/entities/seen-movie/seen-movie.reducer';
+// prettier-ignore
+import movieUser, {
+  MovieUserState
+} from 'app/entities/movie-user/movie-user.reducer';
+// prettier-ignore
+import contact, {
+  ContactState
+} from 'app/entities/contact/contact.reducer';
+// prettier-ignore
+import role, {
+  RoleState
+} from 'app/entities/role/role.reducer';
+// prettier-ignore
+import address, {
+  AddressState
+} from 'app/entities/address/address.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -25,6 +49,12 @@ export interface IRootState {
   readonly password: PasswordState;
   readonly settings: SettingsState;
   readonly sessions: SessionsState;
+  readonly movie: MovieState;
+  readonly seenMovie: SeenMovieState;
+  readonly movieUser: MovieUserState;
+  readonly contact: ContactState;
+  readonly role: RoleState;
+  readonly address: AddressState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -40,6 +70,12 @@ const rootReducer = combineReducers<IRootState>({
   password,
   settings,
   sessions,
+  movie,
+  seenMovie,
+  movieUser,
+  contact,
+  role,
+  address,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

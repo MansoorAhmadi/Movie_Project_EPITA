@@ -1,0 +1,43 @@
+{
+    "name": "MovieUser",
+    "fields": [
+        {
+            "fieldName": "username",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "seenMovie",
+            "otherEntityRelationshipName": "movieUser",
+            "relationshipName": "seenMovie"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "role",
+            "otherEntityRelationshipName": "movieUser",
+            "relationshipName": "role",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "movieUser",
+            "relationshipName": "contact",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20211212163900",
+    "entityTableName": "movie_user",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

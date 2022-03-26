@@ -1,3 +1,98 @@
+#MOVIE-PROJECT
+
+Here is a quick documentation of the project diveded into 4 Chepters:
+On the root folder we have 3 subfolders: MovieJavaWeb, MovieNodeJS and MovieReactJS
+
+Chapter #1: MovieJavaWeb
+
+1: DataModels: Java classes that represents the Database.
+
+    /src/main/java/fr/epita/ratingMovies/domain:
+
+    	*Address.java
+    	*Contact.java
+    	*Movie.java
+    	*MovieUser.java
+    	*Role.java
+    	*SeenMovie.java
+    	*User.java
+
+2: Repositories: JPA for Database queries.
+
+    /src/main/java/fr/epita/ratingMovies/repository:
+
+    	*AddressRepository.java
+    	*ContactRepository.java
+    	*MovieRepository.java
+    	*MovieUserRepository.java
+    	*RoleRepository.java
+    	*SeenMovieRepository.java
+    	*UserRepository.java
+
+3: Services:
+3.1: DTO - Data Transfer Object for the services channels
+*AddressDTO.java
+*ContactDTO.java
+*MovieDTO.java
+*MovieUserDTO.java
+*RoleDTO.java
+*SeenMovieDTO.java
+\*UserDTO.java
+
+    3.2: Mapper - To map the DTO fields to the data model classes
+
+    	*AddressMapper.java
+    	*ContactMapper.java
+    	*MovieMapper.java
+    	*MovieUserMapper.java
+    	*RoleMapper.java
+    	*SeenMovieMapper.java
+    	*UserMapper.java
+
+
+    3.3: Service Classes - To serve the entity operations 'CRUD'
+
+    	*AddressService.java
+    	*ContactService.java
+    	*MovieService.java
+    	*MovieUserService.java
+    	*RoleService.java
+    	*SeenMovieService.java
+    	*UserService.java
+
+4: Web:
+4.1: REST - we make APIs endpoints for all the entities
+
+    	*AddressResource.java			:		https://localhost:8080/api/addresses
+    	*ContactResource.java			:		https://localhost:8080/api/
+    	*MovieResource.java			:		https://localhost:8080/api/
+    	*MovieUserResource.java		:		https://localhost:8080/api/
+    	*RoleResource.java			:		https://localhost:8080/api/
+    	*SeenMovieResource.java		:		https://localhost:8080/api/
+    	*UserResource.java			:		https://localhost:8080/api/
+
+    Those Endpoints are used for API Management in APIMAN.
+
+5: Run:
+
+    1. Configuration files ("application-dev.yml" and "application-prod.yml") to run the Backend can be find in:
+    MovieJavaWeb\src\main\resources\config
+
+    DataBase configuration in application-dev.yml
+    ...
+    datasource:
+    	type: com.zaxxer.hikari.HikariDataSource
+    	url: jdbc:postgresql://localhost:5432/MovieJavaWeb
+    	username: postgres
+    	password: root
+    ...
+
+    2. The Java Backend can be run either with intelliJ Run button or the following command:
+    $ mvnw          // it means maven work as maven is used for dependencies
+
+    3. The project should be running on port 8080 in development mod, for production mod we need the following command:
+    $ mvnw -Pprod // with port 8080 by default
+
 # Movies
 
 This application was generated using JHipster 6.8.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.8.0](https://www.jhipster.tech/documentation-archive/v6.8.0).

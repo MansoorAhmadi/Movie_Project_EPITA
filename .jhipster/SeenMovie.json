@@ -1,0 +1,36 @@
+{
+    "name": "SeenMovie",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "seenMovie",
+            "relationshipName": "movie",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movieUser",
+            "otherEntityRelationshipName": "seenMovie",
+            "relationshipName": "movieUser",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20211212163800",
+    "entityTableName": "seen_movie",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
