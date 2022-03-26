@@ -1,3 +1,8 @@
+1. Run the database //POSTGRES SQL MOVIE DATABASE
+2. Run the backend //SPRINGBOOT APPLICATION
+3. Run the front-end //INTELLIJ-TERMINAL - NPM START
+
+#DETAILS
 #MOVIE-PROJECT
 
 Here is a quick documentation of the project diveded into 4 Chepters:
